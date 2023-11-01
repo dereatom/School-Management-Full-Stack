@@ -25,10 +25,10 @@ public class StudentController {
     public ResponseEntity<Student> getStudentById(@PathVariable Long id) {
         return new ResponseEntity<>(studentService.getStudentById(id), HttpStatus.OK);
     }
-//    @GetMapping("/name/{studentFirstName}")
-//    public ResponseEntity<Student> getStudentByFirstName(@PathVariable String studentFirstName) {
-//        return new ResponseEntity<>(studentService.getStudentByFirstName(studentFirstName), HttpStatus.OK);
-//    }
+    @GetMapping("/name/{studentFirstName}")
+    public ResponseEntity<Student> getStudentByFirstName(@PathVariable String studentFirstName) {
+        return new ResponseEntity<>(studentService.getStudentByStudentFirstName(studentFirstName), HttpStatus.OK);
+    }
     @PostMapping
     public ResponseEntity<Student> saveStudent(@RequestBody Student student){
         return new ResponseEntity<>(studentService.saveStudent(student), HttpStatus.CREATED);

@@ -17,8 +17,8 @@ public class CourseServiceImpl implements CourseService{
     }
 
     @Override
-    public Course getCourseById(Long id) {
-        return courseRepository.getById(id);
+    public Course getCourseById(Long CourseId) {
+        return courseRepository.getById(CourseId);
     }
 
     @Override
@@ -29,7 +29,6 @@ public class CourseServiceImpl implements CourseService{
 
     @Override
     public Course saveCourse(Course course) {
-
         return courseRepository.save(course);
     }
 

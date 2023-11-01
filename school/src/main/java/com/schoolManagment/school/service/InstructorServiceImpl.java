@@ -15,9 +15,9 @@ public class InstructorServiceImpl implements InstructorService{
     }
 
     @Override
-    public Instructor getInstructorById(Long instructor_id) {
-       return instructorRepository.findById(instructor_id)
-               .orElseThrow(()->new NoResourceFoundException("Instructor not found with id" +instructor_id));
+    public Instructor getInstructorById(Long instructorId) {
+       return instructorRepository.findById(instructorId)
+               .orElseThrow(()->new NoResourceFoundException("Instructor not found with id" +instructorId));
     }
 
     @Override
@@ -33,8 +33,8 @@ public class InstructorServiceImpl implements InstructorService{
     }
 
     @Override
-    public Instructor updateInstructor(Long instructor_id, Instructor instructor) {
-        Instructor exsitingInstructor = getInstructorById(instructor_id);
+    public Instructor updateInstructor(Long instructorId, Instructor instructor) {
+        Instructor exsitingInstructor = getInstructorById(instructorId);
         exsitingInstructor.setFirstName(instructor.getFirstName());
         exsitingInstructor.setLastName(instructor.getLastName());
         exsitingInstructor.setUserName(instructor.getUserName());
@@ -45,8 +45,8 @@ public class InstructorServiceImpl implements InstructorService{
     }
 
     @Override
-    public void deleteInstructor(Long instructor_id) {
-        instructorRepository.deleteById(instructor_id);
+    public void deleteInstructor(Long instructorId) {
+        instructorRepository.deleteById(instructorId);
 
     }
 

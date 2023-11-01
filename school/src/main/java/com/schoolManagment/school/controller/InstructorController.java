@@ -19,7 +19,7 @@ public class InstructorController {
     public ResponseEntity <List<Instructor>> getInstructors() {
         return new ResponseEntity<>(instructorService.getInstructors(), HttpStatus.OK);
     }
-    @GetMapping("/{instructor_id}")
+    @GetMapping("/{instructorId}")
     public ResponseEntity <Instructor> getInstructorById(@PathVariable Long instructorId) {
         return new ResponseEntity<>(instructorService.getInstructorById(instructorId), HttpStatus.OK);
     }
@@ -35,7 +35,7 @@ public class InstructorController {
     public ResponseEntity <Instructor> updateInstructor(@PathVariable Long instructorId, @RequestBody Instructor instructor) {
         return new ResponseEntity<>(instructorService.updateInstructor(instructorId, instructor), HttpStatus.ACCEPTED);
     }
-    @DeleteMapping("/{instructor_id}")
+    @DeleteMapping("/{instructorId}")
     public ResponseEntity <Void> deleteInstructor(@PathVariable Long instructorId) {
         instructorService.deleteInstructor(instructorId);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);

@@ -7,7 +7,7 @@ import java.util.List;
 public interface InstructorService {
     List<Instructor> getInstructors();
 
-    Instructor getInstructorById(Long instructor_id);
+    Instructor getInstructorById(Long instructorId);
 
     Instructor getInstructorByFirstName(String firstName);
 

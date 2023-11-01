@@ -10,7 +10,7 @@ public interface StudentService {
 
      Student getStudentById(Long id);
 
-//     Student getStudentByFirstName(String studentFirstName);
+     Student getStudentByStudentFirstName(String studentFirstName);
 
      Student saveStudent(Student student);
 

@@ -23,11 +23,11 @@ public class StudentServiceImpl implements StudentService{
 
     }
 
-//    @Override
-//    public Student getStudentByFirstName(String studentFirstName) {
-//        return studentRepository.findStudentByFirstName(studentFirstName)
-//        .orElseThrow(()->new NoResourceFoundException("Student not found with first name" +studentFirstName));
-//    }
+    @Override
+    public Student getStudentByStudentFirstName(String studentFirstName) {
+        return studentRepository.findStudentByStudentFirstName(studentFirstName)
+        .orElseThrow(()->new NoResourceFoundException("Student not found with first name" +studentFirstName));
+    }
 
     @Override
     public Student saveStudent(Student student) {
